@@ -1,0 +1,356 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+		scroll-behavior: smooth;
+}
+
+.no-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#menu {
+	text-transform: uppercase;
+	position: fixed;
+	top: 0px;
+	width: 100vw;
+	height: 34px;
+	z-index: 10;
+    
+    .navbar-custom {
+    background-color: #290080;
+
+        /* change the brand and text color */
+        .navbar-brand,
+        .navbar-text {
+            color: rgba(255,255,255,1);
+        }
+
+        /* change the link color */
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.7);
+        }
+
+        /* change the color of active or hovered links */
+        .nav-item.active .nav-link,
+        .nav-item:hover .nav-link {
+            color: #ffffff;
+        }
+    }
+
+	ul {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		list-style: none;
+	}
+	
+    span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
+        color: white;
+        margin: 0 0 0 30px;
+        padding: 0 30px 0 0;
+    }
+    
+	a {
+		&:link {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bolder;
+			font-size: 14px;
+			color: white;
+			text-decoration: none;
+			margin: 0 0 0 30px;
+			padding: 0 30px 0 0;
+			display: block;
+			float: left;
+		}
+
+		&:hover {
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+		}	
+	}  
+}
+
+#slide-1 {
+	min-height: 400px;
+	height: 100vh;
+	position: relative;
+    background: linear-gradient(#000027, #230c8f, #290080);
+
+	.half-page-height {
+		height: 50%;
+	}
+
+	.full-page-width {
+		width: 100%;
+	}
+
+	#particles-slide-1 {
+		position: absolute;
+		height: 50%;
+		width: 100%;
+	}
+
+	#sky {
+		#sun {
+			position: relative;
+			margin: 0 auto;
+			width: 70%;
+
+			#sun-shield {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				z-index: 1;
+				transition: all 1s ease-in;
+				transition-delay: 0s;
+			}
+		}	
+	}
+    
+    #road {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        z-index: 4;
+        background-image: url("img/slide-1/floorwithpalms.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+	#terrain {
+		position: relative;
+		bottom: 0;
+		z-index: 3;
+
+		#horizon-line {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			border-top: 4px solid #a8149b;
+			z-index: 4;
+			box-shadow: 0 0 7px 3px #a8149b,
+									0 0 30px 5px #d519bbaa;
+		}
+	}
+
+	#player-controls {
+		position: absolute;
+		bottom: 45px;
+		max-width: 300px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 10;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+
+		.small-player-button {
+			margin-top: auto;
+			margin-bottom: auto;
+			width: 56px;
+			height: 56px;
+		}
+
+		.big-player-button {
+			margin-top: auto;
+			margin-bottom: auto;
+			width: 100px;
+			height: 100px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+#slide-2 {
+	min-height: 75%;
+	max-width: 100%;
+    background: linear-gradient(#000027, #320045);
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	.row {
+		max-width: 100%;
+	}
+
+	h1 {
+		@media (max-width: 575.98px) {
+			font-size: 12vw;
+		}
+
+		font-size: 69.11px;
+		max-width: 100%;		
+		line-height: 1.2;
+	}
+
+	span {
+		@media (max-width: 575.98px) {
+			font-size: 12vw;
+		}
+
+		font-size: 69.11px;
+		max-width: 100%;
+		text-transform: uppercase;
+		color: #00ffff;
+	}
+
+	p {
+		@media (max-width: 575.98px) {
+			font-size: 3.5vw;
+		}
+
+		@media (max-width: 1199.98px) {
+			padding: 0 12.5%;
+		}
+
+		font-size: 20.15px;
+		max-width: 100%;
+		text-align: center;
+		color: #fff;
+		padding: 0 25%;
+	}
+
+	a {
+		max-width: 100%;
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+
+		&:hover {
+			color: #ccc;
+			text-decoration: none;
+		}
+	}
+
+	#particles-slide-2 {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+#slide-3 {
+    background: #320045;
+    color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	padding-bottom: 50px;
+    
+    .mbr-section-text {
+        text-align: right;
+        font-size: 1rem;
+    }
+    
+    p {
+        @media (max-width: 575.98px) {
+            font-size: 3.5vw;
+        }
+
+        font-size: 20.15px;
+        max-width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #eb2d3c;
+    }
+    
+    img {
+        @media (max-width: 575.98px) {
+            max-width: 100%;
+            padding-left: 0;
+            padding-top: 0;
+            padding-right: 0;
+            padding-bottom: 25px;
+        }
+        
+        padding-left: 20px;
+        max-width: 50%;   
+    }
+
+}
+
+#slide-4 {
+	max-height: 361px;
+	background: #6D0664;
+	color: #fff;
+
+	#synthwave-bands-carousel {
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+        
+        .Wallop-list {
+            text-align: center;  
+            
+            img {
+            max-width: 100%;
+            max-height: 100%;
+            }
+        }
+	}
+}
+
+#slide-5 {
+    background: #320045;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+    padding: 50px 0;
+    text-align: center;
+    
+    h2 {
+    	@media (max-width: 575.98px) {
+			font-size: 12vw;
+		}
+
+		font-size: 69.11px;
+        padding-bottom: 20px;
+    }
+}
+
+#slide-6 {
+    background: #000027;
+
+    .album-cover {
+        width: 100%;
+    }
+}
+
+#slide-7 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	background: #22157a;
+    padding: 20px 0;
+}
